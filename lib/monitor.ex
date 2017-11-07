@@ -19,7 +19,7 @@ defmodule DiskUsageLogger.Monitor do
         label = elem(entry, 0)
         percent_used = elem(entry, 2)
 
-        "diskusage_report label=#{label} percent_used=#{percent_used}"
+        "diskusage_report label=\"#{label}\" percent_used=#{percent_used}"
       end
     end
 
