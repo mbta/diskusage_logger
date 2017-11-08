@@ -46,6 +46,7 @@ defmodule SystemMetrics.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:excoveralls, "~> 0.5", only: :test}]
+    [{:excoveralls, "~> 0.5", only: :test},
+     {:ex_doc, "~> 0.13", only: :dev, runtime: false}]
   end
 end
