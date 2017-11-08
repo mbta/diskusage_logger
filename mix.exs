@@ -3,16 +3,24 @@ defmodule SystemMetrics.Mixfile do
 
   def project do
     [app: :diskusage_logger,
-     version: "0.1.0",
-     build_path: "../../_build",
-     config_path: "../../config/config.exs",
-     deps_path: "../../deps",
-     lockfile: "../../mix.lock",
+     version: "0.2.0",
+     licenses: "",
      elixir: "~> 1.3",
+     description: "A service that logs disk usage each minute",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      test_coverage: [tool: ExCoveralls],
+     package: package(),
      deps: deps()]
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README*"],
+      maintainers: ["Ryan Mahoney"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/mbta/diskusage_logger"}
+    ]
   end
 
   # Configuration for the OTP application
